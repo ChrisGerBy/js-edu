@@ -9,6 +9,20 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      let hours = (knowsProgramming)? 800 : 1300;
+      switch(focus) {
+        case "family": 
+          return Math.ceil(hours / config.family);
+        case "friends": 
+          return Math.ceil(hours / config.friends);
+        case "normal_life": 
+          return Math.ceil(hours / config.normal_life);
+        case "profession": 
+          return Math.ceil(hours / config.profession);
+        case "carrier": 
+          return Math.ceil(hours / config.carrier);
+        case "top_peformance": 
+          return Math.ceil(hours / config.top_peformance);
+      }
   };
   
